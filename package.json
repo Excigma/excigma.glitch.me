@@ -1,0 +1,32 @@
+{
+  "name": "taiwei",
+  "version": "1.0.0",
+  "description": "my bad website.",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "dotenv": "^8.0.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.2",
+    "node-fetch": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "8.x",
+    "npm": "6.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/ExcelledBot/Taiwei.git"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/Excigma/Taiwei/issues"
+  }
+}
