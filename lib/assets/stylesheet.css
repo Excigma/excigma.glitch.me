@@ -408,3 +408,10 @@ summary:focus {
 .jump:target~div {
     animation: highlight 3s ease
 }
+
+button {
+    border: none;
+    color: white;
+    background-color: var(--main-dark);
+    padding: 1em 2em
+}
