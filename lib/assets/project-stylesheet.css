@@ -1,6 +1,9 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: sans-serif;
-    font-weight: bold;
     background: #36393f;
     color: #fff
 }
@@ -47,13 +50,20 @@ a {
 }
 
 .container {
-    border-radius: 1px;
-    margin: 5em 4em;
+    border-radius: 1em;
+    margin: 7em;
     background: #2e3136;
     padding: 5em;
     box-shadow: 10px 10px #1e2124
 }
 
-.center-text {
+#title {
+    font-weight: bold;
+    font-size: 1.2em;
     text-align: center
+}
+
+img {
+    height: 5em;
+    width: 5em;
 }
