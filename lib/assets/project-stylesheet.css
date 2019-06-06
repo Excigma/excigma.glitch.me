@@ -33,9 +33,10 @@ body {
     margin: 0;
 }
 
-#navbar>li:hover {
+#navbar>li:hover,
+#navlogo {
+    background-color: #7289DA;
     color: #fff;
-    background-color: #7289DA
 }
 
 #navbar>li:hover a {
