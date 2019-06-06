@@ -4,7 +4,7 @@ html {
 
 body {
     font-family: sans-serif;
-    background: #36393f;
+    background: linear-gradient(45deg, #36393f, #2e3136);
     color: #fff
 }
 
@@ -15,7 +15,7 @@ body {
     width: 100%;
     top: 0;
     left: 0;
-    background: #4e5d94;
+    background: linear-gradient(45deg, #2e3136, #394562);
     list-style: none;
     text-align: left;
 }
@@ -28,17 +28,22 @@ body {
 }
 
 #navbar>li>a {
-    margin: 0;
     padding: 1em;
+    margin: 0;
 }
 
 #navbar>li:hover {
+    color: #fff;
     background-color: #7289DA
+}
+
+#navbar>li:hover a {
+    color: #fff;
 }
 
 a {
     text-decoration: none;
-    color: #fff
+    color: #7289DA
 }
 
 #content {
