@@ -91,6 +91,8 @@ nav li:hover>a {
 }
 
 .container {
+    outline: solid var(--main-dark);
+    box-shadow: 0.5em 0.5em var(--main-dark);
     margin: 25px auto;
     width: 85%;
     padding: 15px
