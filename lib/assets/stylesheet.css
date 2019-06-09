@@ -113,11 +113,6 @@ nav li:hover>a {
     width: 40px
 }
 
-.enlarge,
-.container {
-    transition: .5s
-}
-
 .circle {
     border-radius: 50%!important
 }
@@ -408,7 +403,7 @@ summary:focus {
     }
 }
 
-.jump:target~div {
+.jump:target {
     animation: highlight 3s ease
 }
 
@@ -418,3 +413,10 @@ button {
     background-color: var(--main-dark);
     padding: 1em 2em
 }
+
+
+/*
+.enlarge,
+.container {
+    transition: .5s
+}*/
