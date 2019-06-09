@@ -25,10 +25,10 @@ a {
     color: var(--accent);
     background: linear-gradient(0deg, currentcolor, currentcolor) bottom center no-repeat;
     background-size: 0 2px;
-    transition: .5s
 }
 
 a:hover {
+    transition: .4s;
     background-size: 100% 3px
 }
 
@@ -87,7 +87,7 @@ nav li a,
 nav li:hover>a {
     background-color: var(--main-dark);
     color: var(--accent);
-    transition: .5s all
+    transition: .3s
 }
 
 .container {
@@ -100,6 +100,7 @@ nav li:hover>a {
 }
 
 .container:hover {
+    transition: .4s;
     border-left: 5px solid;
     transform: scale(1.01)
 }
@@ -141,7 +142,7 @@ nav li:hover>a {
 }
 
 .flipper {
-    transition: 0.6s;
+    transition: .3s;
     transform-style: preserve-3d
 }
 
@@ -238,7 +239,6 @@ footer {
     display: block;
     text-decoration: none;
     border-radius: 50%;
-    transition: all 0.5s ease
 }
 
 #return-to-top img {
@@ -247,15 +247,16 @@ footer {
     top: 15px;
     width: 1em;
     height: 1em;
-    transition: all 0.5s ease;
     transform: rotate(180deg)
 }
 
 #return-to-top:hover {
+    transition: all 0.3s;
     background: var(--main-dark)
 }
 
 #return-to-top:hover img {
+    transition: all 0.3s;
     top: -15px
 }
 
@@ -330,11 +331,10 @@ summary:focus {
     border: 1px solid white;
     padding: 10px;
     width: 100%;
-    -webkit-transition: 0.5s all;
-    transition: 0.5s all
 }
 
 .formInput:focus {
+    transition: .4s;
     -webkit-box-shadow: 0 0 8px var(--accent);
     box-shadow: 0 0 8px var(--accent);
     background-color: white
@@ -413,10 +413,3 @@ button {
     background-color: var(--main-dark);
     padding: 1em 2em
 }
-
-
-/*
-.enlarge,
-.container {
-    transition: .5s
-}*/
