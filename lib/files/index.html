@@ -3,81 +3,208 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="/assets/project-stylesheet.css?ver=0.0.3">
+    <!-- Hey look, a comment!-->
+    <!-- Script to change the colors, show borders and such -->
+
+    <script>
+        let showBorders = false
+
+        function toggleBorders() {
+            document.querySelectorAll("table, th, td ").forEach(elem => {
+                elem.style.border = showBorders ? "0px solid" : " 1px solid red"
+            })
+            showBorders = !showBorders
+        }
+
+        function changeColors() {
+            document.querySelector("body").style.background = `linear-gradient(45deg, #${Math.floor(Math.random() * 16777215).toString(16)}, #${Math.floor(Math.random() * 16777215 - 50).toString(16)})`
+        }
+    </script>
+
+    <!-- Stylings-->
+    <link rel="stylesheet" href="/assets/project-stylesheet.css?ver=0.0.4">
+
+    <!-- Title shown by browsers-->
     <title>SRP | Index</title>
+
+    <!-- Icon shown by browser-->
     <link rel="icon" type="image/x-icon" href="/assets/avatar.jpg">
 </head>
 
 <body>
-    <ul id="navbar">
-        <li id="navlogo"> <b>SmRndmPrjct</b></li>
-        <li>
-            <a href="/project/index.html"><b>Home</b></a>
-        </li>
-        <li><a href="/project/NoStyleZone.html"><b>NStylZn</b></a></li>
-    </ul>
-    <div id="content">
-        <div class="container" id="title">
-            <img class="circle-crop" src="/assets/avatar.jpg" />
-            <br>
-            <br>
-            <h1>Welcome to <i>Some Random Project</i></h1>
-            <h3>
-                Nothing is really here. <br>It's just a random project- or actually, homework.
-                <br>Well I guess here we go
-            </h3>
-            <h4>I'm pretty sure this page is mobile compatible</h4>
-            <a href="#text">Click here to scroll down</a>
-        </div>
+    <a id="top"></a>
+    <!-- Table to put content-->
+    <table id="mainTable">
+        <!-- Table row? I think-->
+        <tr>
+            <!-- Set it to span 2 columns -->
+            <th colspan="2">
 
-        <a id="text"></a>
-        <div class="container">
-            <h1>I don't know what I'm typing</h1>
-            <h2>
-                Maybe I do: enjoy these things from a random thing generator
-            </h2>
-            <p>
-                Some random things as placeholders.
-                <br> sk65afa84d-e44c-50ba-93fb-da8849a75365
-                <br> fd22:7808:eff9:bd7a:52ec:2277:ceb3:684e
-                <br> 172.84.107.250
-                <br> Tunisia
-                <br> cuwhuc@foc.do
-                <br> 1008 Fitep Heights
-            </p>
-        </div>
-        <div class="container">
-            <h1>Enjoy this spam be sure to get to the buttom though</h1>
-            <br>
-            <h1>This is a <pre>h1 header</pre></h1>
-            <h2>This is a <pre>h2 header</pre></h2>
-            <h3>This is a <pre>h2 header</pre></h3>
-            <h4>This is a <pre>h2 header</pre></h4>
-            <h5>This is a <pre>h2 header</pre></h5>
-            <h6>This is a <pre>h2 header</pre></h6>
-            <br>
-            <pre>You can't see me, but I'm here, a line BReak.</pre>
-            <pre>br</pre>
-            <br>
-            <p>Some <pre>paragraph text</pre></p>
-            <i>Italics? :O <pre>An i tag</pre></i>
-            <b>Bold? :O <pre>An b tag</pre></b>
-            <br>
-            <br>
-            <pre>Aww man, where is the underline tag?</pre>
-            <b>There is no underline tag. You can use css's <pre>text-decoration: underline</pre> to do that</b>
-        </div>
-        <div class="container">
-            <h1>Oh right, we needed images ;-;</h1>
-            <h2>aaaaaaaaaaa ok then fine</h2>
-            <br>
-            <h3>Some GIF of me making some random image:</h3>
-            <img class="container-image" src="/assets/randomimage.gif" />
-            <br>
-            <h3>The random image:</h3>
-            <img class="container-image" src="/assets/randomimage.png" />
-        </div>
-    </div>
+                <!-- Give it a ID so it can be easily accessed in the CSS-->
+                <!-- Unordered list-->
+                <ul id="navbar">
+                    <li id="navlogo"> <b>SmRndmPrjct</b></li>
+                    <li>
+                        <a href="/project/index.html"><b>Home</b></a>
+                    </li>
+                    <li><a href="/project/otherpage.html"><b>OtherPage</b></a></li>
+                </ul>
+            </th>
+        </tr>
+
+        <tr>
+            <!-- Set it to one fifth of the space-->
+            <td width="20%">
+                <ul id="sidenav">
+                    <li id="navlogo"> <b>Navigation</b></li>
+                    <li>
+                        <a href="/project/index.html"><b>Home</b></a>
+                    </li>
+                    <li><a href="/project/otherpage.html"><b>OtherPage</b></a></li>
+                    <br>
+                    <li>This is a sidebar</li>
+                    <li>Maybe you'll display your things here</li>
+                    <li>I don't know what you want to do</li>
+                    <br>
+                    <li>Wanna watch a video?</li>
+                    <li><iframe src="https://www.youtube-nocookie.com/embed/y6120QOlsfU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+                </ul>
+            </td>
+
+            <!-- Four fifths-->
+            <td width="80%">
+                <!-- IDs are only for ONE element, classes can be used on multiple elements-->
+                <div class="container" id="title">
+                    <img class="circle-crop" src="/assets/avatar.jpg" />
+                    <br>
+                    <br>
+                    <h1>Welcome to <i>Some Random Project</i></h1>
+                    <h3>
+                        Nothing is really here. <br>It's just a random project- or actually, homework.
+                        <br>Well I guess here we go
+                    </h3>
+                    <h4>I'm pretty sure this page is mobile compatible</h4>
+                    <a href="#text">Click here to scroll down</a>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <!-- Span the whole page-->
+            <td width="100%" colspan="2">
+                <div class="container">
+                    <a id="text"></a>
+                    <p>This site was made using HTML Tables</p>
+                    <p>Don't believe me? Click this button to show table borders:</p>
+                    <!-- Trigger the functions-->
+                    <input type="button" value="Toggle Table Borders" onclick="toggleBorders();" />
+                    <input type="button" value="Change colors" onclick="changeColors();" />
+                </div>
+
+                <div class="container">
+                    <h1>List of commonly used HTML Tags</h1>
+                    <h2>Enjoy this spam</h2>
+                </div>
+
+                <div class="container">
+                    <p>This is a <pre>&ltp></pre></p>
+                    <p>Paragraph text, this is for main content in the page</p>
+                    <p>It is used for large bodies of text, also called "*p*aragraphs"</p>
+                </div>
+
+                <div class="container">
+                    <h1>This is a <pre>&lth1></pre></h1>
+                    <p> It is used for article titles, news titles etc.</p>
+                    <p>Google often reads this to understand the page content</p>
+                    <br>
+                </div>
+
+                <div class="container">
+                    <h2>This is a <pre>&lth2></pre></h2>
+                    <p>Mainly used for subheadings, ie Short summaries of articles</p>
+                    <br>
+                </div>
+                <div class="container">
+                    <h3>This is a <pre>&lth3></pre></h3>
+                    <p>Mainly used for summaries of articles, still larger than &ltp> text</p>
+                    <br>
+
+                </div>
+                <div class="container">
+                    <h4>This is a <pre>&lth4></pre></h4>
+                    <p>This should be the same size as &ltp></p>
+                </div>
+
+                <div class="container">
+                    <h5>This is a <pre>&lth5></pre></h5>
+                    <h6>This is a <pre>&lth6></pre></h6>
+                    <p>These two are used to fine print, and small non-essential info</p>
+                    <p>These are smaller than paragraph text</p>
+
+                </div>
+                <div class="container">
+                    <br>
+                    <pre>You can't see me, but I'm here, a line BReak.</pre>
+                    <pre>&ltbr></pre>
+                    <p>Used for adding gaps between paragraphs and elements</p>
+                    <br>
+                    <p>(There is a &ltbr> here)</p>
+                    <p>For example:</p>
+                    <pre>Pretend I have a looooooooooooong lineeeeeeeeeeeeeeeeeeeeeeeeee&ltbr>eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</pre>
+                    <p>Becomes:</p>
+                    <br>
+                    <p>(There is a &ltbr> here)</p>
+                    <p>Pretend I have a looooooooooooong lineeeeeeeeeeeeeeeeeeeeeeeeee<br>eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
+                </div>
+
+
+                <div class="container">
+                    <i>Oh, getting fancy?</i>
+                    <pre>&lti></pre>
+                    <i>Italics? :O <pre>An i tag</pre></i>
+                </div>
+
+                <div class="container">
+                    <b>Bold? :O <pre>An b tag</pre></b>
+                </div>
+
+                <div class="container">
+                    <pre>Aww man, where is the underline tag?</pre>
+                    <b>There is no underline tag. You can use css's <pre>text-decoration: underline</pre> to do that</b>
+                    <p style="text-decoration: underline">Like this</p>
+                </div>
+
+                <div class="container">
+                    <h2>And the img, or image tag</h2>
+                    <pre>&ltimg src="/assets/randomimage.gif" /></pre>
+                    <pre>&ltimg src="/link/to.image" /></pre>
+                    <p>Notice this is a self closing tag, and does not have a matching &lt/img> tag</p>
+                    <br>
+                    <h3>Some GIF of me making some random image:</h3>
+                    <img class="container-image" src="/assets/randomimage.gif" />
+                    <br>
+                    <h3>The random image:</h3>
+                    <img class="container-image" src="/assets/randomimage.png" />
+                </div>
+
+                <div class="container">
+                    <h2>a tag? What?</h2>
+                    <strike>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</strike>
+                    <pre>&lta></pre>
+                    <p>This tag lets you link to another page, whether it be google, or just one of your own pages</p>
+                    <p>For example, this will go to google:</p>
+                    <pre>&lta href="https://google.com">Click meee&lt/a></pre>
+                    <a href="https://google.com">Click meee</a>
+                </div>
+                <div class="container">
+                    <h1>Hey, guess what?</h1>
+                    <h1><a href="#top"><b><i>Goto</i></b> Top?</a></h1>
+                </div>
+            </td>
+        </tr>
+
+    </table>
+
 </body>
 
 </html>
