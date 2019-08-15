@@ -7,7 +7,7 @@
         "body-parser": "^1.18.3",
         "compression": "^1.7.3",
         "dotenv": "^8.0.0",
-        "ejs": "^2.6.1",
+        "ejs": "^2.6.2",
         "express": "^4.16.2",
         "fast-html-parser": "^1.0.1",
         "node-fetch": "^2.6.0"
