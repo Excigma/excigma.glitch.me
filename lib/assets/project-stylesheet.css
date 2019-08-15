@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    font-family: sans-serif;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
     background: linear-gradient(45deg, #36393f, #2e3136);
     color: #fff
 }
