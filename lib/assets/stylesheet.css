@@ -20,6 +20,7 @@ body {
 }
 
 a {
+    transition: .5s ease-in-out;
     display: inline-block;
     text-decoration: underline;
     color: var(--accent);
@@ -28,13 +29,7 @@ a {
 }
 
 a:hover {
-    transition: .4s;
     background-size: 100% 3px
-}
-
-a:not(.nolink):hover {
-    -webkit-transform: scale(1.02);
-    transform: scale(1.02)
 }
 
 .icon {
@@ -81,16 +76,28 @@ nav li {
 nav li a,
 .arrow {
     text-decoration: none;
-    display: block
+    display: block;
+}
+
+.arrow img {}
+
+.arrow:hover img {
+    transition: 0.5s;
+    transform: rotate(360deg)
+}
+
+nav li>a {
+    transition: .5s ease-in-out;
 }
 
 nav li:hover>a {
     background-color: var(--main-dark);
     color: var(--accent);
-    transition: .3s
 }
 
 .container {
+    transition: 1s all ease-in-out, border-left 0.5s ease-in-out, scale 0.5s ease-in-out;
+    opacity: 1;
     border: thin solid var(--main-dark);
     border-radius: 0.5em;
     box-shadow: 0.3em 0.3em var(--main-dark);
@@ -100,9 +107,7 @@ nav li:hover>a {
 }
 
 .container:hover {
-    transition: .4s;
     border-left: 5px solid;
-    transform: scale(1.01)
 }
 
 .arrow {
@@ -142,7 +147,7 @@ nav li:hover>a {
 }
 
 .flipper {
-    transition: .3s;
+    transition: .5s ease-in-out;
     transform-style: preserve-3d
 }
 
@@ -197,6 +202,7 @@ nav li:hover>a {
 }
 
 #content {
+    overflow: hidden;
     padding-top: 100px
 }
 
@@ -229,6 +235,7 @@ footer {
 }
 
 #return-to-top {
+    transition: .5s ease-in-out;
     z-index: 99;
     position: fixed;
     bottom: 20px;
@@ -242,6 +249,7 @@ footer {
 }
 
 #return-to-top img {
+    transition: all .5s ease-in-out;
     position: relative;
     padding: 0 auto;
     top: 15px;
@@ -251,17 +259,18 @@ footer {
 }
 
 #return-to-top:hover {
-    transition: all 0.3s;
     background: var(--main-dark)
 }
 
 #return-to-top:hover img {
-    transition: all 0.3s;
-    top: -15px
+    transform: rotate(540deg);
+    top: -15px;
+    opacity: 0.6;
 }
 
 #return-to-top:active img {
-    top: -90vh
+    opacity: 0.1;
+    top: -50px;
 }
 
 .desktop {
@@ -334,7 +343,7 @@ summary:focus {
 }
 
 .formInput:focus {
-    transition: .4s;
+    transition: .5s ease-in-out;
     -webkit-box-shadow: 0 0 8px var(--accent);
     box-shadow: 0 0 8px var(--accent);
     background-color: white
@@ -412,4 +421,10 @@ button {
     color: white;
     background-color: var(--main-dark);
     padding: 1em 2em
+}
+
+.fade {
+    transition: 2s ease-in-out;
+    opacity: 0;
+    transform: translateX(15%) skew(20deg);
 }
